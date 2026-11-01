@@ -6,12 +6,15 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
+use App\Mail\OrderPlacedMail;
 
 class OrderController extends Controller
 {
     public function store(Request $request)
     {
-        // Honeypot: real visitors never fill this hidden field.
+        // Honeypot protection
         if ($request->filled('website')) {
             return redirect()->route('home');
         }
@@ -34,10 +37,15 @@ class OrderController extends Controller
 
         $product = Product::active()->findOrFail($data['product_id']);
 
-        // Prices are always calculated on the server, never trusted from the browser.
-        $fee = (int) Setting::get('delivery_' . $data['delivery_zone'], 0);
+        // Calculate delivery fee
+        $fee = (int) Setting::get(
+            'delivery_' . $data['delivery_zone'],
+            0
+        );
+
         $qty = (int) $data['quantity'];
 
+        // Save order first
         $order = Order::create([
             'order_number'  => Order::newNumber(),
             'product_id'    => $product->id,
@@ -55,6 +63,19 @@ class OrderController extends Controller
             'status'        => 'pending',
             'ip_address'    => $request->ip(),
         ]);
+
+        // Send order notification email
+        try {
+            Mail::to('takbirgadgets@gmail.com')
+                ->send(new OrderPlacedMail($order));
+
+        } catch (\Throwable $e) {
+            // Do not interrupt successful order placement
+            Log::error('Order notification email failed', [
+                'order_number' => $order->order_number,
+                'error' => $e->getMessage(),
+            ]);
+        }
 
         return redirect()->route('order.thanks', $order->order_number);
     }
