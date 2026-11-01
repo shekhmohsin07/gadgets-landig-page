@@ -34,6 +34,7 @@
     <div class="offcanvas-body menu-list">
         <a href="{{ route('home') }}"><i class="bi bi-house-door"></i> হোম</a>
         <a href="{{ route('search') }}"><i class="bi bi-grid"></i> সব পণ্য</a>
+        <a href="{{ route('order.track.form') }}"><i class="bi bi-grid">অর্ডার ট্র্যাক</i></a>
         @if(\App\Models\Setting::whatsappNumber())
             <a href="https://wa.me/{{ \App\Models\Setting::whatsappNumber() }}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp</a>
         @endif

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderTrackingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,8 @@ Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/product/{product}', [ProductController::class, 'show'])->name('product.show');
 Route::post('/order', [OrderController::class, 'store'])->middleware('throttle:8,1')->name('order.store');
 Route::get('/thank-you/{number}', [OrderController::class, 'thanks'])->name('order.thanks');
+Route::get('/track-order', [OrderTrackingController::class, 'index'])->name('order.track.form');
+Route::post('/track-order', [OrderTrackingController::class, 'track'])->middleware('throttle:10,1')->name('order.track');
 
 /*
 |--------------------------------------------------------------------------
