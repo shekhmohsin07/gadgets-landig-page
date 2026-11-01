@@ -1,4 +1,4 @@
-# Gadget Care — Laravel store (home page + product landing pages)
+# Gadgets Items — Laravel store (home page + product landing pages)
 
 Laravel · MySQL · Blade · Bootstrap 5 · plain CSS/JS (no Node/Vite build needed)
 
@@ -23,7 +23,7 @@ php artisan key:generate
 Create an empty MySQL database (for example `gadgetcare`), then edit `.env`:
 
 ```
-DB_DATABASE=gadgetcare
+DB_DATABASE=gadgets_item
 DB_USERNAME=root
 DB_PASSWORD=your_password
 ADMIN_EMAIL=you@example.com
