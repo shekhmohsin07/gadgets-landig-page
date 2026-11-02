@@ -18,6 +18,7 @@ class Setting extends Model
     public static function defaults(): array
     {
         return [
+<<<<<<< HEAD
             'site_name'        => 'Takbir Gadgets',
             'site_logo'        => 'images/logo.jpg',
             'meta_description' => 'Takbir Gadgets - original gadgets at the best price. Cash on delivery all over Bangladesh.',
@@ -25,13 +26,27 @@ class Setting extends Model
             'phone'            => '',
             'whatsapp_number'  => '',
             'address'          => 'Bangladesh',
+=======
+            'site_name'        => 'Gadget Care',
+            'site_logo'        => '',
+            'meta_description' => 'Gadget Care - original gadgets at the best price. Cash on delivery all over Bangladesh.',
+            'footer_about'     => 'আপনার গ্যাজেট পার্টনার! আভিজাত্য, আধুনিকতা ও নতুন প্রযুক্তিগুলি সবার হাতের মুঠোয়, ফ্রি ডেলিভারি সহ।',
+            'phone'            => '01348025532',
+            'whatsapp_number'  => '01348025532',
+            'address'          => 'Dhaka, Bangladesh',
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
             'facebook_url'     => '',
             'youtube_url'      => '',
             'tiktok_url'       => '',
             'delivery_inside'  => '101',
             'delivery_outside' => '101',
+<<<<<<< HEAD
             'primary_color'    => '#e30000',
             'accent_color'     => '#0a0a0a',
+=======
+            'primary_color'    => '#1558d6',
+            'accent_color'     => '#25b84c',
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
 
             // Pixel / tracking
             'pixel_enabled'    => '1',
@@ -73,6 +88,7 @@ class Setting extends Model
         self::$memo = null;
     }
 
+<<<<<<< HEAD
     /** Public URL of the logo (admin upload, or the bundled Takbir Gadgets logo). */
     public static function logoUrl(): string
     {
@@ -81,6 +97,8 @@ class Setting extends Model
         return asset($logo !== '' ? $logo : 'images/logo.jpg');
     }
 
+=======
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
     /** WhatsApp number in international format for wa.me links (Bangladesh default). */
     public static function whatsappNumber(): string
     {

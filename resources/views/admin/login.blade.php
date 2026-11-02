@@ -7,14 +7,21 @@
     <title>Admin login · {{ $settings['site_name'] }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+<<<<<<< HEAD
         body { background: linear-gradient(135deg, #0a0a0a 45%, {{ $settings['primary_color'] ?: '#e30000' }}); min-height: 100vh; display: flex; align-items: center; }
+=======
+        body { background: linear-gradient(135deg, {{ $settings['primary_color'] ?: '#1558d6' }}, #0e3fa3); min-height: 100vh; display: flex; align-items: center; }
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         .box { max-width: 400px; width: 100%; margin: 0 auto; background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="box">
+<<<<<<< HEAD
         <img src="{{ \App\Models\Setting::logoUrl() }}" alt="" style="height:64px;border-radius:14px" class="mb-2">
+=======
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         <h1 class="h4 fw-bold mb-1">{{ $settings['site_name'] }}</h1>
         <p class="text-muted small mb-4">Admin dashboard login</p>
         <form method="post" action="{{ route('admin.login.submit') }}">
@@ -32,7 +39,11 @@
                 <input type="checkbox" name="remember" value="1" class="form-check-input" id="remember">
                 <label for="remember" class="form-check-label">Remember me</label>
             </div>
+<<<<<<< HEAD
             <button class="btn w-100 text-white" style="background:{{ $settings['primary_color'] ?: '#e30000' }}">Sign in</button>
+=======
+            <button class="btn btn-primary w-100">Sign in</button>
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         </form>
     </div>
 </div>

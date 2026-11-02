@@ -26,7 +26,11 @@ class Order extends Model
     public static function newNumber(): string
     {
         do {
+<<<<<<< HEAD
             $number = 'TG' . strtoupper(Str::random(7));
+=======
+            $number = 'GC' . strtoupper(Str::random(7));
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         } while (self::query()->where('order_number', $number)->exists());
 
         return $number;

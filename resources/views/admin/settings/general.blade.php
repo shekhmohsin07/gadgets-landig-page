@@ -10,6 +10,7 @@
             <div class="col-md-6"><label class="form-label">Site name *</label><input name="site_name" class="form-control" value="{{ old('site_name', $values['site_name']) }}" required></div>
             <div class="col-md-6">
                 <label class="form-label">Logo (replaces the text name in the header)</label>
+<<<<<<< HEAD
                 <div class="mb-2"><img src="{{ \App\Models\Setting::logoUrl() }}" style="height:44px;border-radius:8px" alt=""> @if($values['site_logo'] && $values['site_logo'] !== 'images/logo.jpg')<label class="ms-2 small"><input type="checkbox" name="remove_logo" value="1"> use default Takbir Gadgets logo</label>@endif</div>
                 <input type="file" name="logo" accept="image/*" class="form-control">
             </div>
@@ -22,6 +23,20 @@
                 <label class="form-label">Dark color (header, footer, call button)</label>
                 <input type="color" name="accent_color" class="form-control form-control-color" value="{{ old('accent_color', $values['accent_color'] ?: '#0a0a0a') }}">
                 <div class="form-text">Black from the logo.</div>
+=======
+                @if($values['site_logo'])<div class="mb-2"><img src="{{ asset($values['site_logo']) }}" style="height:40px" alt=""> <label class="ms-2 small"><input type="checkbox" name="remove_logo" value="1"> remove</label></div>@endif
+                <input type="file" name="logo" accept="image/*" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Primary color (buttons, header text, footer)</label>
+                <input type="color" name="primary_color" class="form-control form-control-color" value="{{ old('primary_color', $values['primary_color'] ?: '#1558d6') }}">
+                <div class="form-text">Pick the blue from your logo.</div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Accent color (order / confirm buttons)</label>
+                <input type="color" name="accent_color" class="form-control form-control-color" value="{{ old('accent_color', $values['accent_color'] ?: '#25b84c') }}">
+                <div class="form-text">Pick the green from your logo.</div>
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
             </div>
             <div class="col-12"><label class="form-label">Meta description (Google / Facebook preview)</label><input name="meta_description" class="form-control" value="{{ old('meta_description', $values['meta_description']) }}"></div>
             <div class="col-12"><label class="form-label">Footer text</label><textarea name="footer_about" rows="2" class="form-control">{{ old('footer_about', $values['footer_about']) }}</textarea></div>

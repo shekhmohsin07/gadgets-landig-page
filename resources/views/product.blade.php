@@ -174,7 +174,11 @@
                 <div class="d-flex justify-content-between fw-bold fs-5"><span>মোট মূল্য:</span><span class="brand-text" id="sumTotal">৳0</span></div>
             </div>
 
+<<<<<<< HEAD
             <button type="submit" class="btn btn-brand btn-lg w-100 fw-bold" id="submitBtn">অর্ডার সম্পন্ন করুন</button>
+=======
+            <button type="submit" class="btn btn-wa btn-lg w-100 fw-bold" id="submitBtn">অর্ডার সম্পন্ন করুন</button>
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         </form>
     </section>
 </div>

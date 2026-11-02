@@ -15,7 +15,11 @@ class DatabaseSeeder extends Seeder
     {
         // ---- First admin account (change the password after first login) ----
         User::updateOrCreate(
+<<<<<<< HEAD
             ['email' => env('ADMIN_EMAIL', 'admin@takbirgadgets.com')],
+=======
+            ['email' => env('ADMIN_EMAIL', 'admin@gadgetcare.shop')],
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
             [
                 'name'     => env('ADMIN_NAME', 'Admin'),
                 'password' => env('ADMIN_PASSWORD', 'ChangeMe@123'),
@@ -32,7 +36,11 @@ class DatabaseSeeder extends Seeder
             return; // don't overwrite a live catalogue
         }
 
+<<<<<<< HEAD
         Banner::create(['title' => 'Welcome', 'image' => 'images/banners/welcome.jpg', 'sort_order' => 1, 'is_active' => true]);
+=======
+        Banner::create(['title' => 'Welcome', 'image' => 'images/banners/welcome.svg', 'sort_order' => 1, 'is_active' => true]);
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
 
         // ---- Top selling products (4 full landing pages) ----
         $products = [

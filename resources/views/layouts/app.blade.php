@@ -6,21 +6,35 @@
     <title>@yield('title', $settings['site_name'])</title>
     <meta name="description" content="@yield('description', $settings['meta_description'])">
     @stack('meta')
+<<<<<<< HEAD
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
     <meta name="theme-color" content="{{ $settings['accent_color'] ?: '#0a0a0a' }}">
     <meta property="og:site_name" content="{{ $settings['site_name'] }}">
+=======
+    @if(!empty($settings['site_logo']))
+        <link rel="icon" href="{{ asset($settings['site_logo']) }}">
+    @endif
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<<<<<<< HEAD
     <link href="{{ asset('css/style.css') }}?v=3" rel="stylesheet">
     <style>
         :root {
             --brand: {{ $settings['primary_color'] ?: '#e30000' }};
             --dark: {{ $settings['accent_color'] ?: '#0a0a0a' }};
+=======
+    <link href="{{ asset('css/style.css') }}?v=1" rel="stylesheet">
+    <style>
+        :root {
+            --brand: {{ $settings['primary_color'] ?: '#1558d6' }};
+            --accent: {{ $settings['accent_color'] ?: '#25b84c' }};
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         }
     </style>
 
@@ -54,14 +68,21 @@
         @endif
         <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}"><i class="bi bi-house-door"></i><span>Home</span></a>
         <a href="{{ route('search') }}" class="{{ request()->routeIs('search') ? 'active' : '' }}"><i class="bi bi-search"></i><span>Search</span></a>
+<<<<<<< HEAD
         <a href="{{ route('order.track.form') }}" class="{{ request()->routeIs('order.track*') ? 'active' : '' }}"><i class="bi bi-truck"></i><span>Track</span></a>
+=======
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         @if(!empty($settings['phone']))
             <a href="tel:{{ preg_replace('/\s+/', '', $settings['phone']) }}"><i class="bi bi-telephone"></i><span>Call</span></a>
         @endif
     </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<<<<<<< HEAD
     <script src="{{ asset('js/store.js') }}?v=3"></script>
+=======
+    <script src="{{ asset('js/store.js') }}?v=1"></script>
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
     @stack('scripts')
 </body>
 </html>

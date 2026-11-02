@@ -22,7 +22,10 @@
             <div class="small text-muted">{{ $order->address }}@if($order->thana), {{ $order->thana }}@endif @if($order->district), {{ $order->district }}@endif</div>
         </div>
 
+<<<<<<< HEAD
         <a href="{{ route('order.track.form') }}" class="btn btn-brand-dark btn-lg w-100 mb-2"><i class="bi bi-truck"></i> অর্ডার ট্র্যাক করুন</a>
+=======
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         <a href="{{ route('home') }}" class="btn btn-brand btn-lg w-100">আরও পণ্য দেখুন</a>
     </div>
 </div>

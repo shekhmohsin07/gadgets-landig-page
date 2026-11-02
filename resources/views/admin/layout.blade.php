@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
+<<<<<<< HEAD
         :root { --brand: {{ $settings['primary_color'] ?: '#e30000' }}; --dark: {{ $settings['accent_color'] ?: '#0a0a0a' }}; }
         body { background: #f3f3f5; }
         .sidebar { width: 250px; flex: 0 0 250px; background: var(--dark); min-height: 100vh; position: sticky; top: 0; align-self: flex-start; max-height: 100vh; overflow-y: auto; }
@@ -31,12 +32,28 @@
         @media (min-width: 992px) { .sidebar .head { display: block; } }
         .table td, .table th { white-space: nowrap; }
         .table td.wrap { white-space: normal; }
+=======
+        :root { --brand: {{ $settings['primary_color'] ?: '#1558d6' }}; --accent: {{ $settings['accent_color'] ?: '#25b84c' }}; }
+        body { background: #f3f6fb; }
+        .sidebar { width: 240px; background: var(--brand); min-height: 100vh; position: sticky; top: 0; align-self: flex-start; }
+        .sidebar .brand { color: #fff; font-weight: 700; font-size: 1.15rem; padding: 1rem 1.1rem; display: block; }
+        .sidebar a.nav-link { color: rgba(255,255,255,.85); padding: .6rem 1.1rem; border-radius: 0; }
+        .sidebar a.nav-link:hover, .sidebar a.nav-link.active { background: rgba(255,255,255,.14); color: #fff; }
+        .sidebar .nav-label { color: rgba(255,255,255,.55); font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; padding: .9rem 1.1rem .2rem; }
+        .btn-brand { background: var(--brand); border-color: var(--brand); color: #fff; }
+        .btn-brand:hover { background: color-mix(in srgb, var(--brand) 80%, #000); color: #fff; }
+        .card { border: 0; box-shadow: 0 1px 6px rgba(20,40,80,.07); border-radius: 12px; }
+        .thumb { width: 52px; height: 52px; object-fit: cover; border-radius: 8px; background: #fff; border: 1px solid #e6eaf0; }
+        .stat { font-size: 1.7rem; font-weight: 700; }
+        @media (max-width: 991px) { .sidebar { width: 100%; min-height: auto; position: static; } .layout { flex-direction: column; } }
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
     </style>
 </head>
 <body>
 @php $r = fn ($p) => request()->routeIs($p) ? 'active' : ''; @endphp
 <div class="d-flex layout">
     <aside class="sidebar">
+<<<<<<< HEAD
         <div class="head">
             <a class="brand" href="{{ route('admin.dashboard') }}">
                 <img src="{{ \App\Models\Setting::logoUrl() }}" alt="">
@@ -45,6 +62,10 @@
             <button class="nav-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav" aria-label="Menu"><i class="bi bi-list"></i></button>
         </div>
         <nav class="nav flex-column collapse d-lg-block pb-3" id="adminNav">
+=======
+        <a class="brand" href="{{ route('admin.dashboard') }}"><i class="bi bi-lightning-charge-fill"></i> {{ $settings['site_name'] }}</a>
+        <nav class="nav flex-column">
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
             <a class="nav-link {{ $r('admin.dashboard') }}" href="{{ route('admin.dashboard') }}"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
             <a class="nav-link {{ $r('admin.orders.*') }}" href="{{ route('admin.orders.index') }}"><i class="bi bi-receipt me-2"></i>Orders</a>
             <div class="nav-label">Catalog</div>

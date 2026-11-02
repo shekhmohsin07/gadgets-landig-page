@@ -95,7 +95,11 @@
             <tr style="background:#f5f5f5;">
                 <td><strong>Total Amount</strong></td>
                 <td align="right">
+<<<<<<< HEAD
                     <strong style="color:#e30000; font-size:20px;">
+=======
+                    <strong style="color:#f15a24; font-size:20px;">
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
                         ৳{{ number_format($order->total, 2) }}
                     </strong>
                 </td>

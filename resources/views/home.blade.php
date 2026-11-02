@@ -3,10 +3,16 @@
 @section('title', $settings['site_name'] . ' — Best Gadgets in Bangladesh')
 
 @section('content')
+<<<<<<< HEAD
 
 {{-- Hero banners (95% width) --}}
 @if($banners->count())
     <div class="hero-wrap">
+=======
+<div class="container-xl pt-3">
+    {{-- Hero banners --}}
+    @if($banners->count())
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
         <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
             @if($banners->count() > 1)
                 <div class="carousel-indicators">
@@ -25,6 +31,7 @@
                 @endforeach
             </div>
             @if($banners->count() > 1)
+<<<<<<< HEAD
                 <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous"><span class="carousel-control-prev-icon"></span></button>
                 <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next"><span class="carousel-control-next-icon"></span></button>
             @endif
@@ -41,6 +48,13 @@
         <a href="{{ route('order.track.form') }}" class="trust-item text-reset"><i class="bi bi-box-seam"></i><div><b>অর্ডার ট্র্যাকিং</b><span>ফোন নাম্বার দিয়ে ট্র্যাক করুন</span></div></a>
         <div class="trust-item"><i class="bi bi-headset"></i><div><b>কাস্টমার সাপোর্ট</b><span>WhatsApp ও ফোনে সহায়তা</span></div></div>
     </div>
+=======
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+            @endif
+        </div>
+    @endif
+>>>>>>> affbddf8f8d532a5bdffe687b4b6384364a50c38
 
     {{-- Top selling --}}
     @if($topSelling->count())
