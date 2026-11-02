@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6f6"/><stop offset="1" stop-color="#f1e1e1"/></linearGradient></defs>
+<rect width="800" height="800" fill="url(#g)"/>
+<rect x="270" y="170" width="260" height="70" rx="22" fill="#111"/><rect x="250" y="235" width="300" height="360" rx="34" fill="#d6d6dc"/>
+<rect x="250" y="235" width="300" height="360" rx="34" fill="none" stroke="#9a9aa4" stroke-width="6"/><path d="M550 300h70q40 0 40 40v110q0 40-40 40h-70" fill="none" stroke="#111" stroke-width="30"/>
+<rect x="250" y="520" width="300" height="14" fill="#e60000"/>
+<text x="400" y="420" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#4a4a54">Silver Crest</text><text x="400.0" y="764" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#1b1b1f">Electric Grinder Blender</text></svg>
